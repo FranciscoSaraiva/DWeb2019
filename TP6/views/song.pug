@@ -1,0 +1,16 @@
+extends layout
+block content
+    .container
+        .card.text-center.mt-5
+            .card-header
+              h1 #{cancao.tit}
+            .card-body
+              h4.card-title #{cancao.prov}
+              h5.card-title #{cancao.local}
+              if cancao.musico
+                p.card-text.font-weight-bold #{cancao.musico}
+              if cancao.obs
+                p.card-text.font-weight-bold #{cancao.obs['#text']}
+              a.link-button(href='/songs#'+cancao.id) Voltar à lista
+            .card-footer
+              b #{cancao.file['#text']} - #{cancao.duracao}

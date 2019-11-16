@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Lista de entidades
+  table
+    each entidade in entidades
+     tr
+      td
+        a(href='/'+entidade.id) #{entidade.sigla} - #{entidade.designacao}
+        

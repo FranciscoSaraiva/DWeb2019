@@ -1,0 +1,46 @@
+extends ../layout
+block content
+  h1 Movies
+  a(href="/").btn.btn-primary.mt-2.mb-2 Return to homepage
+  if movies.length > 0
+  ul.list-group.list-group-flush
+    each movie in movies
+      li.list-group-item
+        a(href="/movies/"+movie._id) #{movie.title} - #{movie.year}
+        button(value="Edit" data-toggle='modal' data-target='#editMovieModal'+movie._id).ml-2.btn.btn-outline-primary Edit
+        button(onclick="deleteMovie('"+movie._id+"')").ml-2.btn.btn-outline-primary Delete
+  if movies.length == 0
+    h2 No movies found...
+
+
+  each movie in movies
+    div(id='editMovieModal'+movie._id).modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content.border.border-dark
+          .modal-header.font-weight-bold
+            h5.modal-title.center-text Add Movie
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
+          .modal-body
+            form#movieForm.needs-validation(action='/movies/'+movie._id method='POST')
+              input#_id.form-control(type='hidden' name='id' value=movie._id)
+              .form-group
+                label.font-weight-bold(for='title') Title:  
+                input#tit.form-control(type='text' name='title' placeholder='Add a title...' value=movie.title)
+
+              .form-group
+                label.font-weight-bold(for='year') Year: 
+                input#prov.form-control(type='text' name='year' placeholder="Add a year..." value=movie.year)
+
+              .form-group
+                label.font-weight-bold(for='cast') Cast: 
+                input#prov.form-control(type='text' name='cast' placeholder="Add the cast separated by commas..." value=movie.cast.toString())
+
+              .form-group
+                label.font-weight-bold(for='genres') Genres: 
+                input#prov.form-control(type='text' name='genres' placeholder="Add the genres separated by commas..." value=movie.genres.toString())
+
+              .form-group
+                button.link-button.form-control(type='submit').bnt.btn-primary Submit               
+          .modal-footer.font-weight-bold
+            button.link-button.font-weight-bold(type='button' data-dismiss='modal').btn.btn-primary Close

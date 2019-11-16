@@ -1,0 +1,44 @@
+extends layout
+block content
+  .homepage.d-flex.justify-content-center.flex-column
+    h1.homepage-h1.text-center.mt-5 Canções de Arqueossítios
+    h2.homepage-h2.mt-3 Existem #{count} canções
+    button(type="button" data-toggle='modal' data-target='#createSongModal' style="margin:auto").link-button.mt-2 Adicionar Canção
+
+  #createSongModal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content.border.border-dark
+        .modal-header.font-weight-bold
+          h5.modal-title.text-white Adicionar canção
+          button.close.text-white(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          form#taskForm.needs-validation(action='/song' method='POST')
+            .form-group
+              label.font-weight-bold(for='tit') Título:  
+              input#tit.form-control(type='text' name='tit' placeholder='Adicione o título da música...')
+
+            .form-group
+              label.font-weight-bold(for='prov') Província: 
+              input#prov.form-control(type='text' name='prov' placeholder="Indique a província...")
+            
+            .form-group
+              label.font-weight-bold(for='local') Localidade: 
+              input#local.form-control(type='text' name='local' placeholder="Indique a localidade...")
+            
+            .form-group
+              label.font-weight-bold(for='musico') Músico: 
+              input#musico.form-control(type='text' name='musico' placeholder="Indique o nome do músico...")
+            
+            .form-group
+              label.font-weight-bold(for='file') Ficheiro: 
+              input#file.form-control(type='text' name='file' placeholder="Indique o nome do ficheiro...")
+            
+            .form-group
+              label.font-weight-bold(for='duracao') Duração: 
+              input#duracao.form-control(type='text' name='duracao' placeholder="Indique a duração da música...")
+                    
+            .form-group
+              button.link-button.form-control(type='submit') Adicionar               
+        .modal-footer.font-weight-bold
+          button.link-button.font-weight-bold(type='button' data-dismiss='modal') Close

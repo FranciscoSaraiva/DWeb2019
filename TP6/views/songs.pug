@@ -1,0 +1,69 @@
+extends layout
+block content
+    .container
+        h1.homepage-h1.text-center.mt-5 Lista de canções
+        if prov != ""
+          h2.homepage-h2.text-center.mt-2 Província: #{prov}
+
+        .table-responsive.mt-5.mb-5
+            table.table.table-hover.table-striped
+                thead
+                  tr
+                    th(scope='col') #
+                    th(scope='col') Título
+                    th(scope='col') Músico
+                    th(scope='col') Local
+                    th(scope='col') Província
+                    th(scope='col')
+                tbody
+                  each c, index in cancoes
+                    tr(href='#'+c.id)
+                      td(onclick="window.location='/song/"+c.id+"'").align-middle #{index + 1}
+                      td(onclick="window.location='/song/"+c.id+"'").align-middle #{c.tit}
+                      td(onclick="window.location='/song/"+c.id+"'").align-middle #{c.musico}
+                      td(onclick="window.location='/song/"+c.id+"'").align-middle #{c.local}
+                      td(onclick="window.location='/song/"+c.id+"'").align-middle #{c.prov}
+                      td.align-middle.d-flex.align-items-middle
+                        button(type="button" data-toggle='modal' data-target='#editSongModal'+c.id).link-button.mr-1 Editar
+                        input(type="button" value="Apagar" onclick="deleteSong('"+c.id+"')").link-button.mr-1
+
+
+        each c in cancoes
+          div(id='editSongModal'+c.id).modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+            .modal-dialog(role='document')
+              .modal-content.border.border-dark
+                .modal-header.font-weight-bold
+                  h5.modal-title.text-white Editar canção
+                  button.close.text-white(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  form#taskForm.needs-validation(action='/updatesong' method='POST')
+                    input#id.form-control(type='hidden' name='id' value=c.id)
+                    .form-group
+                      label.font-weight-bold(for='tit') Título:  
+                      input#tit.form-control(type='text' name='tit' placeholder='Adicione o título da música...' value=c.tit)
+
+                    .form-group
+                      label.font-weight-bold(for='prov') Província: 
+                      input#prov.form-control(type='text' name='prov' placeholder="Indique a província..." value=c.prov)
+
+                    .form-group
+                      label.font-weight-bold(for='local') Localidade: 
+                      input#local.form-control(type='text' name='local' placeholder="Indique a localidade..." value=c.local)
+
+                    .form-group
+                      label.font-weight-bold(for='musico') Músico: 
+                      input#musico.form-control(type='text' name='musico' placeholder="Indique o nome do músico..." value=c.musico)
+
+                    .form-group
+                      label.font-weight-bold(for='file') Ficheiro: 
+                      input#file.form-control(type='text' name='file' placeholder="Indique o nome do ficheiro..." value=c.file['#text'])
+
+                    .form-group
+                      label.font-weight-bold(for='duracao') Duração: 
+                      input#duracao.form-control(type='text' name='duracao' placeholder="Indique a duração da música..." value=c.duracao)
+
+                    .form-group
+                      button.link-button.form-control(type='submit') Editar               
+                .modal-footer.font-weight-bold
+                  button.link-button.font-weight-bold(type='button' data-dismiss='modal') Close

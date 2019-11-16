@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/Desenvolvimento Aplicações Web/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP4</keyname>
+        <title>Website com servidor nodejs para os arqueossítios.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 4 consistiu na criação de um <b>servidor nodejs</b> para um website 
+            dos arqueossítios do <b>TP3</b>. Com apoio do <b>arq.xml</b> é retirado o conteúdo para
+            apresentar em cada elemento.
+        </p>
+        <p>
+            Segunda parte foi criar no <b>arq.xls</b> do TP3 e adaptar à geração das páginas
+            e conteúdos para os <u>arqueossítios</u>. Foi adicionado no template do <b>ARQELEM</b> do ficheiro
+            uma instrução de processamento para o template que deve ser assumido para a transformação 
+            nomeadamente o <b>template.xls</b>.
+            Foi movido o template das páginas individuais para um só ficheiro <b>template.xls</b> que é responsável
+            pela transformação dos xmls individuais dos <u>arqueossítios</u>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./server.js">server.js</deliverable>
+        <deliverable path="./arq.xsl">arq.xsl</deliverable>
+        <deliverable path="./template.xsl">template.xsl</deliverable>
+    </deliverables>
+</pr>

@@ -1,0 +1,51 @@
+extends layout
+block content
+    .container-fluid.m-1
+        header.bg-danger.rounded.font-weight-bold.text-center.p-2
+            h1.text-white Task Manager
+        content
+            button.btn.btn-outline-danger.btn-lg.btn-block.text-center.mt-2.mb-2(type='button' data-toggle='modal' data-target='#createTaskModal') Add Task
+            table.table.table-hover
+                thead
+                    tr
+                        th(scope='col') Title
+                        th(scope='col') Description
+                        th(scope='col') Date
+                        th(scope='col')
+                tbody
+                    each task in task_list
+                        tr
+                          td= task.title
+                          td= task.description
+                          td= task.date
+                          td
+                            a
+                              i.material-icons(onclick='deleteTask('+task.id+')') delete
+
+        
+        footer.bg-danger.rounded.text-center.p-2
+            h5.text-white Francisco Saraiva - PG39287
+
+        #createTaskModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content.border.border-dark
+              .modal-header.bg-danger.font-weight-bold
+                h5.modal-title.text-white Add new task
+                button.close.text-white(type='button' data-dismiss='modal' aria-label='Close')
+                  span(aria-hidden='true') &times;
+              .modal-body
+                form#taskForm.needs-validation(action='/task' method='POST' onsubmit="return validateForm()")
+                  .form-group
+                    label.font-weight-bold(for='title') Title: 
+                    input#title.form-control(type='text' name='title' placeholder='Add a title to the task...')
+                  .form-group
+                    label.font-weight-bold(for='description') Description: 
+                    textarea#description.form-control(rows='3' name='description' placeholder="Add a description to the task...")
+                  .form-group
+                    label.font-weight-bold(for='date') Date: 
+                    input#date.form-control(type='date' name='date')
+                  .form-group
+                    button.btn.btn-outline-danger.form-control(type='submit') Submit               
+              .modal-footer.bg-danger.font-weight-bold
+                button.btn.btn-outline-light.font-weight-bold(type='button' data-dismiss='modal') Close
+

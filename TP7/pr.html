@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>Project Record</title>
+      <meta charset="UTF-8"></meta>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+      <style>
+         hr {
+         display: block;
+         unicode-bidi: isolate;
+         margin-block-start: 0.5em;
+         margin-block-end: 0.5em;
+         margin-inline-start: auto;
+         margin-inline-end: auto;
+         overflow: hidden;
+         border-style: inset;
+         border-width: 1px;
+         }
+         
+      </style>
+   </head>
+   <body class="w3-container">
+      <h1 style="text-align:center">Project Record</h1>
+      
+      <hr></hr>
+      <table>
+         <tr>
+            <td>
+               <strong>KEY NAME:</strong>DAW_MEI2019_TP7
+            </td>
+            <td>
+               <strong>BEGIN DATE:</strong>29 Outubro 2019
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <strong>TITLE:</strong>Website de gestão de filmes.
+            </td>
+            <td>
+               <strong>END DATE:</strong>5 Novembro 2019
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <strong>SUPERVISOR:</strong>
+               <a href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</a>
+            </td>
+         </tr>
+      </table>
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>WorkTeam:</h3>
+      
+      <p>PG39287.             
+         Francisco Saraiva -             
+         
+         <a href="mailto:pg39287@alunos.uminho.pt">pg39287@alunos.uminho.pt</a>
+         - 
+         <a href="https://github.com/pg39287/">https://github.com/pg39287/</a>
+      </p>
+      
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>ABSTRACT:</h3>
+      
+      <p>
+         Trabalho de casa 7 está dividido em duas partes:
+         - 
+         <b>3 Exercícios de queries MongoDB</b>
+         - 
+         <b>Website para gestão de canções</b>
+         
+      </p>
+      
+      <p>
+         O primeiro trabalho de casa consiste em 3 
+         <b>queries</b> dadas na aula para resolver como exercícios
+         complementares para aprender a trabalhar com 
+         <a href="https://www.mongodb.com/">MongoDB</a>.
+         As queries eram 
+         <b>1.) Listar gêneros de filmes e indicar quantos há de cada um</b>, 
+         
+         <b>2.) Quais os títulos dos filmes do gênero "Drama"</b> e 
+         
+         <b>Que atores participaram em filmes do gênero "Comedy"</b>.
+         
+      </p>
+      
+      <p>
+         O segundo trabalho de casa consiste num website como os passados trabalhos de casa,
+         em que gere filmes numa base de dados em mongo.
+         O website está separado em duas aplicações, o website com gestão e frontend para pesquisar
+         filmes pelo título e para adicionar, editar ou
+         apagar filmes da base de dados e a segunda é uma REST API que interage com base de
+         dados separado em várias rotas e pedidos.
+         
+      </p>
+      
+      <p>
+         O servidor possuí um controlador 
+         <b>movieController.js</b> responsável pela interação com a base de dados, e 3 routers, o 
+         
+         <b>indexRouter.js</b> responsável pela homepage na caminho 
+         <b>/</b>, o 
+         <b>movieRouter.js</b> responsável pelas rotas 
+         <b>/movies</b> 
+         para vários pedidos relacionados com os filmes e o 
+         <b>apiRouter.js</b> responsável pela rota 
+         <b>/api-movies</b> que contém os pedidos
+         à API do website para gerir pedidos HTTP para recuperar informação em 
+         <u>json</u>.
+         
+      </p>
+      
+      <p>
+         Foram usadas as seguintes tecnologias para suporte na criação deste website: 
+         
+         <a href="https://pugjs.org/api/getting-started.html">pugjs</a> para templates das views, 
+         
+         <a href="https://getbootstrap.com/">bootstrap 4</a> para o design e estilo das páginas,
+         
+         <a href="https://nodemon.io/">nodemon</a> para reiniciar o servidor a cada mudança feita no projeto, 
+         
+         <a href="https://github.com/axios/axios">axios</a> para apoio nos pedidos HTTP no lado do cliente e
+         
+         <a href="https://mongoosejs.com/">mongoose js</a> ORM para interagir com o mongo.  
+         
+      </p>
+      
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>Deliverables:</h3>
+      <ol>
+         
+         <li>
+            <a href="./exercicios TP7.md">Exercícios de queries MongoDB</a>
+         </li>
+         
+         <li>
+            <a href="./README.md">Instruções de importação da base de dados MongoDB</a>
+         </li>
+         
+         <li>
+            <a href="./movies/app.js">app.js: Ficheiro do servidor</a>
+         </li>
+         
+         <li>
+            <a href="./movies/models/movie.js">movie.js: Schema e Modelo de um filme na base de dados</a>
+         </li>
+         
+         <li>
+            <a href="./movies/controllers/movieController.js">movieController.js: Controller dos filmes</a>
+         </li>
+         
+         <li>
+            <a href="./movies/routes/indexRouter.js">indexRouter: router para o index do website</a>
+         </li>
+         
+         <li>
+            <a href="./movies/routes/moviesRouter.js">moviesRouter: router dos pedidos de filmes do website</a>
+         </li>
+         
+         <li>
+            <a href="./movies/routes/apiRouter.js">apiRouter: router dos pedidos API</a>
+         </li>
+         
+      </ol>
+      <hr></hr>
+      
+   </body>
+</html>

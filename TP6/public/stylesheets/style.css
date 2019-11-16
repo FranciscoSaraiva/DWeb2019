@@ -1,0 +1,117 @@
+body {
+  background-image: url("/images/bg.jpg");
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.homepage-h1 {
+  font-size: 45pt;
+  border: 10px;
+  border-style: outset;
+  border-radius: 100pt;
+  border-color: saddlebrown;
+  background: sienna;
+  color: tan;
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}
+
+.homepage-h2 {
+  font-size: 25pt;
+  border: 10px;
+  border-style: outset;
+  border-radius: 100pt;
+  border-color: saddlebrown;
+  background: sienna;
+  color: tan;
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}
+
+.link-button {
+  width: fit-content;
+  height: auto;
+  background: saddlebrown;
+  border: 5px;
+  border-style: outset;
+  border-radius: 10pt;
+  border-color: saddlebrown;
+  color: tan;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.link-button-region {
+  width: fit-content;
+  height: auto;
+  background: saddlebrown;
+  border: 5px;
+  border-style: outset;
+  border-radius: 10pt;
+  border-color: saddlebrown;
+  color: tan;
+  font-size: 35pt;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.link-button:hover {
+  background: chocolate;
+}
+
+.link-button-region:hover {
+  background: chocolate;
+}
+
+.error-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 13%;
+  border: 10px;
+  border-style: outset;
+  border-radius: 100pt;
+  border-color: saddlebrown;
+  background: sienna;
+  color: tan;
+  width: fit-content;
+  padding: 30px;
+  margin: auto;
+}
+
+.table {
+  background-color: burlywood;
+}
+
+.table tr:hover {
+  cursor: pointer;
+}
+
+.table thead {
+  background-color: saddlebrown;
+}
+
+.card-header, .card-footer{
+  background: saddlebrown !important;
+  color: chocolate;
+}
+.card-body{
+  background: tan;
+}
+.card-body .btn{
+  background: salmon;
+}
+
+.modal-header {
+  background: saddlebrown !important;
+  color: chocolate;
+}
+.modal-body {
+  background: tan;
+}
+.modal-footer{
+  background: saddlebrown;
+  color:chocolate;
+}

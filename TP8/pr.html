@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>Project Record</title>
+      <meta charset="UTF-8"></meta>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+      <style>
+         hr {
+         display: block;
+         unicode-bidi: isolate;
+         margin-block-start: 0.5em;
+         margin-block-end: 0.5em;
+         margin-inline-start: auto;
+         margin-inline-end: auto;
+         overflow: hidden;
+         border-style: inset;
+         border-width: 1px;
+         }
+         
+      </style>
+   </head>
+   <body class="w3-container">
+      <h1 style="text-align:center">Project Record</h1>
+      
+      <hr></hr>
+      <table>
+         <tr>
+            <td>
+               <strong>KEY NAME:</strong>DAW_MEI2019_TP8
+            </td>
+            <td>
+               <strong>BEGIN DATE:</strong>5 Novembro 2019
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <strong>TITLE:</strong>REST API para prémios Nobel.
+            </td>
+            <td>
+               <strong>END DATE:</strong>12 Novembro 2019
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <strong>SUPERVISOR:</strong>
+               <a href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</a>
+            </td>
+         </tr>
+      </table>
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>WorkTeam:</h3>
+      
+      <p>PG39287.             
+         Francisco Saraiva -             
+         
+         <a href="mailto:pg39287@alunos.uminho.pt">pg39287@alunos.uminho.pt</a>
+         - 
+         <a href="https://github.com/pg39287/">https://github.com/pg39287/</a>
+      </p>
+      
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>ABSTRACT:</h3>
+      
+      <p>
+         Trabalho de casa 8 consiste numa 
+         <b>REST API</b> para extrair informação sobre prémios nobel e 
+         os seus laureados. 
+         O servidor possuí um controlador 
+         <b>prizeController.js</b> responsável pela interação com a base de dados e o router 
+         
+         <b>apiRouter.js</b> responsável pelas à API do website para gerir pedidos HTTP para recuperar informação
+         em 
+         <u>json</u>.
+         
+      </p>
+      
+      <p>
+         Foram usadas as seguintes tecnologias para suporte na criação desta API:
+         
+         <a href="https://nodemon.io/">nodemon</a> para reiniciar o servidor a cada mudança feita no projeto e
+         
+         <a href="https://mongoosejs.com/">mongoose js</a> ORM para interagir com o mongo.  
+         
+      </p>
+      
+      <hr></hr>
+      
+      <hr></hr>
+      <h3>Deliverables:</h3>
+      <ol>
+         
+         <li>
+            <a href="./README.md">README para as rotas e o exercício do TPC com as instruções necessárias para o funcionamento</a>
+         </li>
+         
+         <li>
+            <a href="./nobel/app.js">app.js: Ficheiro do servidor</a>
+         </li>
+         
+         <li>
+            <a href="./nobel/models/prize.js">prize.js: Schema e Modelo de um prémio mais laureados na base de dados</a>
+         </li>
+         
+         <li>
+            <a href="./nobel/models/apiResponse.js">apiResponse.js: Estrutura de resposta da API</a>
+         </li>
+         
+         <li>
+            <a href="./nobel/controllers/prizeController.js">prizeController.js: Controller dos prémios para as queries na base de dados</a>
+         </li>
+         
+         <li>
+            <a href="./nobel/routes/apiRouter.js">apiRouter: router para os diferentes endpoints da API</a>
+         </li>
+         
+      </ol>
+      <hr></hr>
+      
+   </body>
+</html>

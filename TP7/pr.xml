@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/Desenvolvimento Aplicações Web/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP7</keyname>
+        <title>Website de gestão de filmes.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>29 Outubro 2019</bdate>
+        <edate>5 Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 7 está dividido em duas partes:
+            - <b>3 Exercícios de queries MongoDB</b>
+            - <b>Website para gestão de canções</b>
+        </p>
+        <p>
+            O primeiro trabalho de casa consiste em 3 <b>queries</b> dadas na aula para resolver como exercícios
+            complementares para aprender a trabalhar com <xref url="https://www.mongodb.com/">MongoDB</xref>.
+            As queries eram <b>1.) Listar gêneros de filmes e indicar quantos há de cada um</b>, 
+            <b>2.) Quais os títulos dos filmes do gênero "Drama"</b> e 
+            <b>3.) Que atores participaram em filmes do gênero "Comedy"</b>.
+        </p>
+        <p>
+            O segundo trabalho de casa consiste num website como os passados trabalhos de casa, em que gere filmes numa base de dados em mongo.
+            O website está separado em duas aplicações, o website com gestão e frontend para pesquisar filmes pelo título e para adicionar, editar ou
+            apagar filmes da base de dados e a segunda é uma REST API que interage com base de dados separado em várias rotas e pedidos.
+        </p>
+        <p>
+            O servidor possuí um controlador <b>movieController.js</b> responsável pela interação com a base de dados, e 3 routers, o 
+            <b>indexRouter.js</b> responsável pela homepage no caminho <b>/</b>, o <b>movieRouter.js</b> responsável pelas rotas <b>/movies</b> 
+            para vários pedidos relacionados com os filmes e o <b>apiRouter.js</b> responsável pela rota <b>/api-movies</b> que contém os pedidos
+            à API do website para gerir pedidos HTTP para recuperar informação em <u>json</u>.
+        </p>
+        <p>
+            Foram usadas as seguintes tecnologias para suporte na criação deste website: 
+            <xref url="https://pugjs.org/api/getting-started.html">pugjs</xref> para templates das views, 
+            <xref url="https://getbootstrap.com/">bootstrap 4</xref> para o design e estilo das páginas,
+            <xref url="https://nodemon.io/">nodemon</xref> para reiniciar o servidor a cada mudança feita no projeto, 
+            <xref url="https://github.com/axios/axios">axios</xref> para apoio nos pedidos HTTP no lado do cliente e
+            <xref url="https://mongoosejs.com/">mongoose js</xref> ORM para interagir com o mongo.  
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./exercicios TP7.md">Exercícios de queries MongoDB</deliverable>
+        <deliverable path="./README.md">Instruções de importação da base de dados MongoDB</deliverable>
+        <deliverable path="./movies/app.js">app.js: Ficheiro do servidor</deliverable>
+        <deliverable path="./movies/models/movie.js">movie.js: Schema e Modelo de um filme na base de dados</deliverable>
+        <deliverable path="./movies/controllers/movieController.js">movieController.js: Controller dos filmes</deliverable>
+        <deliverable path="./movies/routes/indexRouter.js">indexRouter: router para o index do website</deliverable>
+        <deliverable path="./movies/routes/moviesRouter.js">moviesRouter: router dos pedidos de filmes do website</deliverable>
+        <deliverable path="./movies/routes/apiRouter.js">apiRouter: router dos pedidos API</deliverable>
+    </deliverables>
+</pr>

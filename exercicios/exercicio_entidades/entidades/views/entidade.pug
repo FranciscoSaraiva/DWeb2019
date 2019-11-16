@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 Entidade #{entidade.designacao}
+  h2 #{entidade.sigla}
+
+  h3 Tipologias
+  ul
+  each tipologia in entidade.tipologias
+    li #{tipologia.sigla} - #{tipologia.designacao} 
+  
+  h3 Donos
+  ul
+  each dono in entidade.donos 
+    li #{dono.codigo} - #{dono.titulo}
+  
+  h3 Participantes
+  ul
+  each participante in entidade.participantes
+    li #{participante.codigo} - #{participante.titulo}

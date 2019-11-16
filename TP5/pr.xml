@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/Desenvolvimento Aplicações Web/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP5</keyname>
+        <title>Website de gestão de tarefas em nodejs.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>15 Outubro 2019</bdate>
+        <edate>22 Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 5 consistiu na criação de um <b>website para gestão de tarefas</b>, 
+            onde são listadas e criadas tarefas. A criação do mesmo foi feita em servidor <i>nodejs</i> 
+            com outras tecnologias de apoio.
+        </p>
+        <p>
+            O website consiste numa página singular de HTML em que são apresentadas as tarefas criadas numa
+            tabela. Existem dois botões, o botão de <u>adicionar tarefa</u> e o botão de <u>eliminar tarefa</u>, ao lado 
+            de cada uma representada pelo icone do lixo.
+        </p>
+        <p>
+            Organização do projeto encontra-se disposta em a pasta base com os scripts e ficheiros de configuração: 
+            <b>server.js</b> onde é iniciado o servidor e gerido o roteamento, <b>handler.js</b> responsável pelas 
+            funções de apoio e controlo às acções e funcionalidades do servidor e <b>serverConfig.json</b> onde estão 
+            as configurações do servidor guardadas e que são lidas ao iniciar.
+            Na pasta <u>database</u> está o ficheiro de persistência de dados <b>tasks.json</b>, em que cada tarefa
+            é composta por um <i>id</i>, <i>título</i>, <i>descrição</i> e <i>data</i>.
+            Na pasta <u>www</u> estão as views e favicon, em que <b>layout.pug</b> é a base do documento HTML com 
+            as configurações e imports, <b>index.pug</b> é o conteúdo do body que é a página com os botões e tabela
+            de tarefas e <b>error.pug</b> para mostrar uma página de erro quando se tenta aceder a uma rota que não 
+            existe.
+        </p>
+        <p>
+            Foram usadas as seguintes tecnologias para suporte na criação deste website: 
+            <xref url="https://pugjs.org/api/getting-started.html">pugjs</xref> para templates das views, 
+            <xref url="https://getbootstrap.com/">bootstrap 4</xref> para o design e estilo das páginas,
+            <xref url="https://bootstrap-validate.js.org/">bootstrap-validate.js</xref> para validar os elementos do form,
+            <xref url="https://nodemon.io/">nodemon</xref> para reiniciar o servidor a cada mudança feita no projeto e 
+            <xref url="https://google.github.io/material-design-icons/">material-design-icons.</xref> para os icones na lista de tarefas.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./server.js">server.js</deliverable>
+        <deliverable path="./handler.js">handler.js</deliverable>
+        <deliverable path="./serverConfig.json">serverConfig.json</deliverable>
+        <deliverable path="./database/tasks.json">database: tasks.json</deliverable>
+        <deliverable path="./www/layout.pug">www: layout.pug</deliverable>
+        <deliverable path="./www/index.pug">www: layout.pug</deliverable>
+        <deliverable path="./www/error.pug">www: error.pug</deliverable>
+    </deliverables>
+</pr>

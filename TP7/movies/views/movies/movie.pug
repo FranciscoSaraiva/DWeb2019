@@ -1,0 +1,15 @@
+extends ../layout
+block content
+  h1= movie.title
+  h2= movie.year
+  h3 Cast
+  ul
+    each actor in movie.cast
+      li= actor
+  hr
+  h3 Genres
+  ul
+    each genre in movie.genres
+      li= genre
+
+  a(href="/") Return to homepage

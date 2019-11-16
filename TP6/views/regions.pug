@@ -1,0 +1,7 @@
+extends layout
+block content
+    .container
+        h1.homepage-h1.text-center.mt-5 Regiões
+        .container.mb-5.d-flex.justify-content-center.align-content-center.flex-wrap
+            each regiao, index in regioes
+                input(type="button", value=""+regiao+"" onclick="window.location='/songs?prov="+regiao+"'").link-button-region.mt-5.mr-2

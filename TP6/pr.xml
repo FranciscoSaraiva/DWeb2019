@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/Desenvolvimento Aplicações Web/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP6</keyname>
+        <title>Website de gestão de canções.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>22 Outubro 2019</bdate>
+        <edate>29 Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 6 consistiu na criação de um <b>website para gestão de canções</b>, 
+            onde são listadas e geridas canções tradicionais. A criação do mesmo foi feita em servidor <i>nodejs</i> 
+            com outras tecnologias de apoio.
+        </p>
+        <p>
+            O website consiste num website em que apresenta um menu no topo com vários locais e um botão na homepage para adicionar
+            uma canção nova. Existe no topo a barra de menu onde se pode seleccionar a lista das canções todas, ou lista por região 
+            as canções. Na tabela das canções podemos ainda <u>editar</u> e <u>apagar</u> a canção da linha correspondente.
+        </p>
+        <p>
+            O projeto foi gerado com o comando do expressjs para criar um projeto raíz já com vários ficheiros gerados 
+            para apoio à criação do website. De notar os ficheiros mais importantes são <b>app.js</b> de onde o servidor
+            se inicia, <b>index.js</b> onde as rotas do website estão centradas, <b>database.json</b> onde as canções 
+            são guardadas e as variadas <b>views</b> do websites.
+        </p>
+        <p>
+            Foram usadas as seguintes tecnologias para suporte na criação deste website: 
+            <xref url="https://pugjs.org/api/getting-started.html">pugjs</xref> para templates das views, 
+            <xref url="https://getbootstrap.com/">bootstrap 4</xref> para o design e estilo das páginas,
+            <xref url="https://nodemon.io/">nodemon</xref> para reiniciar o servidor a cada mudança feita no projeto e 
+            <xref url="https://github.com/axios/axios">axios</xref> para apoio nos pedidos HTTP no lado do cliente,
+            <xref url="https://www.npmjs.com/package/nanoid">nanoid</xref> para geração de IDs para as canções.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./app.js">app.js</deliverable>
+        <deliverable path="./routes/index.js">index.js</deliverable>
+        <deliverable path="./database/database.json">database: database.json</deliverable>
+        <deliverable path="./views/layout.pug">views: layout.pug</deliverable>
+        <deliverable path="./views/index.pug">views: index.pug</deliverable>
+        <deliverable path="./views/song.pug">views: song.pug</deliverable>
+        <deliverable path="./views/songs.pug">views: songs.pug</deliverable>
+        <deliverable path="./views/regions.pug">views: regions.pug</deliverable>
+        <deliverable path="./views/topbar.pug">views: topbar.pug</deliverable>
+    </deliverables>
+</pr>

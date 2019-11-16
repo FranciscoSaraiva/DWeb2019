@@ -1,0 +1,56 @@
+doctype html
+html    
+    head
+        title Task Manager
+        meta(charset='UTF-8')
+        link(rel="stylesheet" 
+             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", 
+             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+             crossorigin="anonymous")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        style.
+          .material-icons:hover{
+          color:red;
+          cursor:pointer;
+          }
+    body
+        block content
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", 
+           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", 
+           crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js", 
+           integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", 
+           crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", 
+           integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", 
+           crossorigin="anonymous")
+    script(src='https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js')
+    script.
+       bootstrapValidate('#title', 'min:3:Please write a title with 3 or more characters')
+       bootstrapValidate('#description', 'min:5:Please add a description for you task')
+       bootstrapValidate('#date', 'required:Please choose a day for the task')
+       function validateForm() {
+       let form = document.forms["taskForm"];
+       let title = form["title"].value;
+       let description = form["description"].value;
+       let date = form["date"].value; //parse the string date
+       console.log('title: '+title)
+       console.log('description: '+description)
+       console.log('date: '+date)
+       if (title.length >= 3 && description.length >= 5 && date != "") {
+       return true;
+       }
+       return false;
+       }
+       function deleteTask(id) {
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function () {
+       if(this.readyState == 4 && this.status == 200){
+       location.reload();
+       }
+       }
+       xhttp.open("DELETE", "/task", true);
+       xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+       xhttp.send(JSON.stringify({ "id": id }));
+       }
+

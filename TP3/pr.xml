@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/DWeb/DWeb2019/TP3/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP3</keyname>
+        <title>Stylesheet e HTML para PR.dtd e geração de site para os arqueosítios.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 3 onde se preenche o TP3 com as informações com o modelo de <b>PR.dtd</b> em xml,
+            de seguida criar um <b>PR.xls</b> para gerar uma página <b>PR.html</b> com a informação.
+        </p>
+        <p>
+            Segunda parte foi criar um <b>arq.xls</b> para <u>geração</u> de um <i>website</i> para apresentar os <i>arqueosítios</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./pr.xml">pr.xml</deliverable>
+        <deliverable path="./pr.xsl">pr.xsl</deliverable>
+        <deliverable path="./pr.html">pr.html</deliverable>
+        <deliverable path="./arq.xsl">arq.xls</deliverable>
+        <deliverable path="./html/index.html">index arqueosítios</deliverable>
+    </deliverables>
+</pr>

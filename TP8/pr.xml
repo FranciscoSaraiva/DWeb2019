@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/Desenvolvimento Aplicações Web/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP8</keyname>
+        <title>REST API para prémios Nobel.</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>5 Novembro 2019</bdate>
+        <edate>12 Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/pg39287/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 8 consiste numa <b>REST API</b> para extrair informação sobre prémios nobel e 
+            os seus laureados. 
+            O servidor possuí um controlador <b>prizeController.js</b> responsável pela interação com a base de dados e o router 
+            <b>apiRouter.js</b> responsável pelas à API do website para gerir pedidos HTTP para recuperar informação em <u>json</u>.
+        </p>
+        <p>
+            Foram usadas as seguintes tecnologias para suporte na criação desta API:
+            <xref url="https://nodemon.io/">nodemon</xref> para reiniciar o servidor a cada mudança feita no projeto e
+            <xref url="https://mongoosejs.com/">mongoose js</xref> ORM para interagir com o mongo.  
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./README.md">README para as rotas e o exercício do TPC com as instruções necessárias para o funcionamento</deliverable>
+        <deliverable path="./nobel/app.js">app.js: Ficheiro do servidor</deliverable>
+        <deliverable path="./nobel/models/prize.js">prize.js: Schema e Modelo de um prémio mais laureados na base de dados</deliverable>
+        <deliverable path="./nobel/models/apiResponse.js">apiResponse.js: Estrutura de resposta da API</deliverable>
+        <deliverable path="./nobel/controllers/prizeController.js">prizeController.js: Controller dos prémios para as queries na base de dados</deliverable>
+        <deliverable path="./nobel/routes/apiRouter.js">apiRouter: router para os diferentes endpoints da API</deliverable>
+    </deliverables>
+</pr>

@@ -1,0 +1,32 @@
+h1,
+h2,
+h4 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+hr {
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+table {
+    padding: 10px 100px 10px 100px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    background-color: lemonchiffon;
+}
+
+td {
+    padding: 10px;
+}
+
+div {
+    margin-bottom: 20px;
+}
