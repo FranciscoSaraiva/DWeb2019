@@ -2,7 +2,7 @@
 ![alt text](https://www.uminho.pt/_layouts/15/UMinho.PortalUM.UI/images/portal-logo.png "Uminho")
 
 ## "Desenvolvimento de Aplicações Web"
-##### 2019/2019, Universidade do Uminho
+##### 2019/2019, Universidade do Minho
 
 ### Trabalhos de Casa
 
