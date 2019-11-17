@@ -1,0 +1,22 @@
+{
+  "name": "jsonimporter",
+  "preferGlobal": true,
+  "version": "1.0.0",
+  "description": "json importer for mongo",
+  "main": "./bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco Saraiva",
+  "license": "ISC",
+  "bin": {
+    "jsonimporter": "./bin/app.js"
+  },
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^3.0.0",
+    "node-cmd": "^3.0.0",
+    "prompt-confirm": "^2.0.4",
+    "yargs": "^15.0.1"
+  }
+}
