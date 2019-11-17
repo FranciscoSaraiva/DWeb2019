@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/PC/Documents/UMinho/DWEB/PR.dtd">
+<pr>
+    <metadata>
+        <keyname>DAW_MEI2019_TP9</keyname>
+        <title>Aplicação de linha de comandos</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+        <bdate>12 Novembro 2019</bdate>
+        <edate>19 Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>PG39287</identifier>
+            <name>Francisco Saraiva</name>
+            <email>pg39287@alunos.uminho.pt</email>
+            <git>https://github.com/FranciscoSaraiva</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Trabalho de casa 9 era preciso construir uma <b>aplicação de linha de comandos</b> para fazer a importação de 
+            ficheiros json para uma base de dados mongo.
+        </p>
+        <p>
+            Foram usadas as seguintes tecnologias para suporte na criação desta aplicação de linha de comandos:
+            <xref url="https://github.com/sindresorhus/boxen#readme">boxen</xref> para os efeitos de caixa na linha de comandos,
+            <xref url="https://github.com/chalk/chalk#readme">chalk</xref> para pintar com cores palavras nas linhas de comandos,
+            <xref url="https://github.com/RIAEvangelist/node-cmd">node-cmd</xref> para apoio a correr comandos,
+            <xref url="https://github.com/enquirer/prompt-confirm">prompt-confirm</xref> para rápidas mensagens de confirmação por parte do utilizador e
+            <xref url="https://yargs.js.org/">yargs</xref> para apoio no desenvolvimento de aplicações de linhas de comando.         
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="./README.md">Instruções da aplicação</deliverable>
+        <deliverable path="./jsonimporter/bin/app.js">Ficheiro de aplicação</deliverable>
+    </deliverables>
+</pr>

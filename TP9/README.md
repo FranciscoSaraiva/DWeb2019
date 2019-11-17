@@ -2,6 +2,8 @@
 
 ### Installation
 
+#### Pre-Requisite is to have mongo installed in the system
+
 In the directory of **'jsonimporter'** run: 
 ```
 npm link
