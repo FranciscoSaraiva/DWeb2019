@@ -14,30 +14,70 @@ router.get('/ficheiros', (req, res) => {
     .catch(erro => { res.status(500).jsonp(erro) })
 })
 
-router.post('/ficheiros', upload.single('ficheiro'), (req, res) => {
-  let oldPath = __dirname + '/../' + req.file.path;
-  let newPath = __dirname + '/../public/ficheiros/' + req.file.originalname;
+router.post('/ficheiros', upload.array('ficheiro'), (req, res) => {
 
-  fs.rename(oldPath, newPath, (err) => {
-    if (err) throw err
-  })
+  if (req.files.length == 1) {
+    let desc = req.body.desc;
+    let file = req.files[0];
+    
+    let oldPath = __dirname + '/../' + file.path;
+    let newPath = __dirname + '/../public/ficheiros/' + file.originalname;
 
-  let data = new Date();
+    fs.rename(oldPath, newPath, (err) => {
+      if (err) throw err
+    })
 
-  let novoFicheiro = new Ficheiro({
-    data: data.toISOString(),
-    desc: req.body.desc,
-    name: req.file.originalname,
-    mimetype: req.file.mimetype,
-    size: req.file.size
-  })
+    let data = new Date();
+    console.log(file);
+    console.log(req.body)
 
-  novoFicheiro.save((err, ficheiro) => {
-    if (!err)
-      console.log('Ficheiro guardado com sucesso')
-    else
-      console.log('ERRO: ' + err)
-  })
+    let novoFicheiro = new Ficheiro({
+      data: data.toISOString(),
+      desc: desc,
+      name: file.originalname,
+      mimetype: file.mimetype,
+      size: file.size
+    })
+
+    novoFicheiro.save((err, ficheiro) => {
+      if (!err)
+        console.log('Ficheiro guardado com sucesso')
+      else
+        console.log('ERRO: ' + err)
+    })
+  } else {
+    for (let index = 0; index < req.body.desc.length; index++) {
+
+      let desc = req.body.desc[index];
+      let file = req.files[index];
+      console.log(file);
+      let oldPath = __dirname + '/../' + file.path;
+      let newPath = __dirname + '/../public/ficheiros/' + file.originalname;
+
+      fs.rename(oldPath, newPath, (err) => {
+        if (err) throw err
+      })
+
+      let data = new Date();
+      console.log(file);
+      console.log(req.body)
+
+      let novoFicheiro = new Ficheiro({
+        data: data.toISOString(),
+        desc: desc,
+        name: file.originalname,
+        mimetype: file.mimetype,
+        size: file.size
+      })
+
+      novoFicheiro.save((err, ficheiro) => {
+        if (!err)
+          console.log('Ficheiro guardado com sucesso')
+        else
+          console.log('ERRO: ' + err)
+      })
+    }
+  }
   res.redirect('/')
 });
 
