@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Teste Prático 2020, consumo de API
+  h2 Lista de entidades
+  table
+    each entidade in entidades
+      tr
+        td
+          a(href='/'+entidade.id)  #{entidade.sigla} - #{entidade.designacao}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 Entidade #{entidade.designacao}
+  h2 #{entidade.sigla}
+
+  h3 Tipologias
+  ul
+  each tipologia in entidade.tipologias
+    li 
+      a(href=`http://clav.dglab.gov.pt/tipologias/${tipologia.id}`) #{tipologia.sigla} - #{tipologia.designacao} 
+  
+  h3 Processos donos
+  ul
+  each dono in entidade.donos 
+    li 
+      a(href=`http://clav.dglab.gov.pt/classes/consultar/c${dono.codigo}`) #{dono.codigo} - #{dono.titulo}
+  
+  h3 Participantes
+  ul
+  each participante in entidade.participantes
+    li 
+      a(href=`http://clav.dglab.gov.pt/classes/consultar/c${participante.codigo}`) #{participante.codigo} - #{participante.titulo}
+
+  br
+  a(href='/') Voltar à homepage
