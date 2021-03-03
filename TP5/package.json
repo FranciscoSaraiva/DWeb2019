@@ -7,7 +7,7 @@
     "jsonfile": "^5.0.0",
     "material-design-icons": "^3.0.1",
     "nodemon": "^1.19.4",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {},
   "scripts": {
